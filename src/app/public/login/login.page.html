@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content padding>
+    <input type="text" placeholder="Login">
+    <input type="password" placeholder="Password">
+  <ion-button (click)="login()" expand="block">Login</ion-button>
+  <ion-button expand="block" color="secondary" routerLink="/register" routerDirection="forward">Register</ion-button>
+</ion-content>
