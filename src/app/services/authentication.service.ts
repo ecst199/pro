@@ -31,6 +31,11 @@ export class AuthenticationService {
       this.authenticationState.next(true);
     });
   }
+  register(name, email) {
+    console.log(name);
+    console.log(email);
+    console.log('Registro valido');
+  }
 
   logout() {
     return this.storage.remove(TOKEN_KEY).then(() => {

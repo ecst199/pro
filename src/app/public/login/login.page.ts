@@ -8,12 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
+  email: String = '';
+  password: String = '';
+  busy: Promise<any>;
+
   constructor(private authService: AuthenticationService) { }
 
   ngOnInit() {
+    this.email = '';
+    this.password = '';
   }
 
   login() {
-    this.authService.login();
+    if (this.email === 'steve@mail.com') {
+      if (this.password === '12345') {
+        this.authService.login();
+      } else {
+        alert('Password Incorrecto');
+      }
+    } else {
+      alert('Correo Incorrecto');
+    }
   }
 }
