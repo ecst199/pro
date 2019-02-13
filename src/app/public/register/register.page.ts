@@ -21,6 +21,10 @@ export class RegisterPage implements OnInit {
   }
 
   register() {
-    this.authService.register(this.name, this.email);
+    this.authService.register(this.name, this.email).then( response => {
+      alert('Registro Completo');
+    }).catch( exception => {
+      console.log(exception);
+    });
   }
 }
