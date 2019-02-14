@@ -20,14 +20,6 @@ export class LoginPage implements OnInit {
   }
 
   login() {
-    if (this.email === 'steve@mail.com') {
-      if (this.password === '12345') {
-        this.authService.login();
-      } else {
-        alert('Password Incorrecto');
-      }
-    } else {
-      alert('Correo Incorrecto');
-    }
+        this.authService.login(this.email, this.password);
   }
 }
