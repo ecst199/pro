@@ -46,8 +46,8 @@ export class AuthenticationService {
     });
  
   }
-  public register(name: String, email: String): Promise<any> {
-    const data = {name: name, email: email};
+  public register(name: String, email: String, password: String): Promise<any> {
+    const data = {name: name, email: email, password: password};
     return new Promise((resolve, reject) => {
       this.http.post('http://localhost:8000/register' , data).subscribe(
         response => {

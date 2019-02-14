@@ -6,6 +6,9 @@
 
     <input type="text" placeholder="Name" [(ngModel)]='name'>
     <input type="email" placeholder="Email" [(ngModel)]='email'>
+    <input type="password" required placeholder="Password" [(ngModel)]='password'>
+    <input type="password" required placeholder="Repeat Password" [(ngModel)]='repeat_password'>
+    <div style="color: red" *ngIf="isValid">Contraseñas no coinciden</div>
     
   <ion-button (click)="register()" expand="block">Register</ion-button>
   <ion-button expand="block" color="secondary" routerLink="/login" routerDirection="forward">Back</ion-button>
