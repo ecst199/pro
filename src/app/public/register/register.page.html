@@ -1,21 +1,15 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-        <ion-back-button defaultHref="/login"></ion-back-button>
-    </ion-buttons>
-    <ion-title>Register</ion-title>
-  </ion-toolbar>
-</ion-header>
- 
 <ion-content>
     <img src="../../../assets/image/puzzle.png" alt="logo">
     <br>
     <br>
     <br>
 
-    <input type="text" placeholder="Name">
-    <input type="email" placeholder="Email">
+    <input type="text" placeholder="Name" [(ngModel)]='name'>
+    <input type="email" placeholder="Email" [(ngModel)]='email'>
+    <input type="password" required placeholder="Password" [(ngModel)]='password'>
+    <input type="password" required placeholder="Repeat Password" [(ngModel)]='repeat_password'>
+    <div style="color: red" *ngIf="isValid">Contraseñas no coinciden</div>
     
-  <ion-button  expand="block">Register</ion-button>
+  <ion-button (click)="register()" expand="block">Register</ion-button>
   <ion-button expand="block" color="secondary" routerLink="/login" routerDirection="forward">Back</ion-button>
 </ion-content>

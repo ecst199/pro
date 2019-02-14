@@ -4,8 +4,8 @@
     <br>
     <br>
 
-    <input type="email" placeholder="Email">
-    <input type="password" placeholder="Password">
+    <input type="email" placeholder="Email" [(ngModel)]='email'>
+    <input type="password" placeholder="Password" id="password" [(ngModel)]='password'>
   <ion-button (click)="login()" expand="block">Login</ion-button>
   <ion-button expand="block" color="secondary" routerLink="/register" routerDirection="forward">Register</ion-button>
 </ion-content>
